@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="login-page">
+        <header>
+            <img src="assets/images/logo.png" alt="Logo" id="login-logo" onclick="goToMainPage()">
+        </header>
+        <!-- Login Form -->
+    <div class="login-register-form">
+        <form autocomplete="off" class="form login-register-form__inner" onsubmit="return handleSubmit(event)">
+            <div class="title step-form-title mb-3">
+                <div class="font-weight-semi-bold default">
+                    <h1>Sigortam.net’e Hoş Geldin!</h1>
+                </div>
+            </div>
+            <div class="title step-form-subtitle mb-5">
+                <div>Giriş yapmak veya üye olmak için aşağıdaki alanları doldurabilirsin.</div>
+            </div>
+            <div class="input tc-tax-input mb-4">
+                <div class="input__wrapper">
+                    <div class="input__area">
+                        <div class="input__area__inner">
+                            <label for="identityNoInput" class="input__label">TC Kimlik No veya Vergi No</label>
+                            <input id="identityNoInput" maxlength="11" minlength="1" type="tel" name="tc-or-tax-no-input" autocomplete="off" class="input__native">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input phone-input">
+                <div class="input__wrapper">
+                    <div class="input__area">
+                        <div class="input__area__inner">
+                            <label for="phoneInput" class="input__label">Cep Telefonu</label>
+                            <input type="tel" name="phone" autocomplete="tel" id="phoneInput" class="input__native mb-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="ml-auto login-register-form__submitButton button app-button app-button--default app-button--sm">
+                <span class="app-button__title">Giriş Yap / Üye Ol</span>
+            </button>
+            <p></p>
+            <button type="button" class="ml-auto return-to-main-button button app-button app-button--default app-button--sm" onclick="goToMainPage()">
+                <span class="app-button__title">Ana Sayfaya Dön</span>
+            </button>
+        </form>
+    </div>
+    </div>
+    <!-- Message Box -->
+    <div id="messageBox" style="display: none; border: 1px solid #4CAF50; padding: 10px; margin-top: 20px; color: #4CAF50;">
+        <!-- JSON response will be shown here -->
+    </div>
+
+    <script>
+        // Function to handle form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            // Get input values
+            const tcOrTaxNo = document.getElementById('identityNoInput').value;
+            const phone = document.getElementById('phoneInput').value;
+
+            // URL of the API endpoint
+            const apiUrl = `https://jsonplaceholder.typicode.com/posts?userId=${tcOrTaxNo}&phone=${phone}`;
+
+            // Make the HTTP GET request
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Display the JSON response in the message box
+                    const messageBox = document.getElementById('messageBox');
+                    messageBox.style.display = 'block';
+                    messageBox.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+        // Redirect to main page
+        function goToMainPage() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

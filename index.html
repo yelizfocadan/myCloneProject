@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigortam.net Clone</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Sigortam.net Logo" width="120">
+            </a>
+            <button id="login-button" onclick="goToLoginPage()">Giriş Yap / Üye Ol</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" onclick="togglePopup()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center my-5">
+        <div class="container">
+            <h1>Sigortada Güvenin Adresi</h1>
+            <p>Doğru Ürün. İyi Fiyat. 7/24 Hizmet.</p>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="container">
+        <div class="row text-center">
+            <div class="col-6 col-md-3">
+                <img src="assets/images/kasko.png" alt="Kasko">
+                <p>Kasko</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="assets/images/elektrikli-arac.png" alt="Elektrikli Araç Kaskosu">
+                <p>Elektrikli Araç Kaskosu</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="assets/images/trafik.png" alt="Trafik Sigortası">
+                <p>Trafik Sigortası</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="assets/images/saglik.png" alt="Tamamlayıcı Sağlık">
+                <p>Tamamlayıcı Sağlık</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="assets/images/imm.png" alt="İMM">
+                <p>İMM</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="assets/images/seyahat.png" alt="Seyahat Sağlık">
+                <p>Seyahat Sağlık</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="assets/images/dask.png" alt="DASK">
+                <p>DASK</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="assets/images/ozel-saglik.png" alt="Özel Sağlık">
+                <p>Özel Sağlık</p>
+            </div>
+        </div>
+        <div class="text-center my-4">
+            <a href="#" class="btn btn-link" onclick="togglePopup()">Tüm Ürünleri Gör</a>
+        </div>
+    </section>
+
+    <!-- Popup Content -->
+    <div id="popup-content" class="popup-content" style="display: none;">
+        <h2>Sigortam.net'i keşfedin</h2>
+        <div class="categories">
+            <div class="category">
+                <h3>Aracım</h3>
+                <ul>
+                    <li>Kasko</li>
+                    <li>Trafik Sigortası</li>
+                    <li>İMM</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Sağlığım</h3>
+                <ul>
+                    <li>Tamamlayıcı Sağlık Sigortası</li>
+                    <li>Özel Sağlık Sigortası</li>
+                    <li>Seyahat Sağlık</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Evim</h3>
+                <ul>
+                    <li>DASK</li>
+                    <li>Konut Sigortası</li>
+                    <li>Evim Güvende</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Diğer</h3>
+                <ul>
+                    <li>Cep Telefonu</li>
+                    <li>Evcil Hayvan</li>
+                    <li>Ferdi Kaza <span class="new">Yeni</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

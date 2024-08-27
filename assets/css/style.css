@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: bold;
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+section.container .col-6 {
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+#main-page, #login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+#main-page {
+    background-color: #f4f4f4;
+}
+
+.content {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.login-register-form {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input__label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input__native {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button.app-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+button.app-button:hover {
+    background-color: #0056b3;
+}
+
+#main-logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.popup-content {
+    position: absolute;
+    top: 60px; /* Adjust according to your navbar height */
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    width: 300px; /* Adjust width as needed */
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category {
+    flex: 1 1 45%; /* Adjust this to change the category size */
+}
+
+.category h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category li {
+    margin-bottom: 5px;
+}
+
+.new {
+    color: orange;
+    font-weight: bold;
+}
